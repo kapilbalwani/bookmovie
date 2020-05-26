@@ -1,0 +1,35 @@
+
+
+<div class="jumbotron jumbotron-fluid">
+    <!-- <div class="form-group">
+      <label for="sel1">Sort By : &nbsp;&nbsp;</label>
+      <select class="form-control" id="sel1">
+        <option>Popularity</option>
+        <option>2</option>
+        <option>3</option>
+        <option>4</option>
+      </select>
+      <form class="form-inline my-2 my-lg-0">
+        <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+      </form>
+    </div> -->
+    
+    <div class="card"  >
+      <!-- <img src="../../assets/movieimages/Taare_Zameen_Par_Like_Stars_on_Earth_poster.png" class="card-img-top" alt="..."> -->
+      <div class="card-body">
+        <h5 class="card-title">Booking Summary: </h5>
+        <p class="card-text">Theater Name : {{movieF.theatre}}</p>
+        <p class="card-text">Location : {{movieF.location}} </p>
+        <p class="card-text">Seats Booked : {{movieF.seats}} </p>
+        <p class="card-text">Movie Name : {{movieF.name}}</p>
+        <p class="card-text">Price :{{movieF.price}} </p>
+        <p class="card-text">Show Date :{{movieF.date}} </p>
+        <p class="card-text">Show Time : {{movieF.time}}</p>
+        <button type="submit" class="btn btn-primary" (click)="onModify()">Modify Booking</button>
+        <button type="submit" class="btn btn-primary" (click)="onConfirm()">Confirm Booking</button>
+        <!-- <a href="#" class="btn btn-primary">Book</a>
+        <p class="recommended" *ngIf="+movie.rating>3">Recommended</p> -->
+      </div>
+    </div>
+</div>

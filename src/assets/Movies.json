@@ -1,0 +1,30 @@
+[
+    {
+        "name":"Taare Zameen Par",
+        "language":"Hindi",
+        "dim":"2D",
+        "rating":"5",
+        "image":"../../assets/movieimages/Taare_Zameen_Par_Like_Stars_on_Earth_poster.png"
+    },
+    {
+        "name":"Krrish 3",
+        "language":"Hindi",
+        "dim":"3D",
+        "rating":"4",
+        "image":"../../assets/movieimages/krish3.jpg"
+    },
+    {
+        "name":"The Lion King",
+        "language":"English",
+        "dim":"2D",
+        "rating":"2",
+        "image":"../../assets/movieimages/lionking.webp"
+    },
+    {
+        "name":"dhoom",
+        "language":"Hindi",
+        "dim":"2D",
+        "rating":"3",
+        "image":"../../assets/movieimages/dhoom.jpg"
+    }
+]

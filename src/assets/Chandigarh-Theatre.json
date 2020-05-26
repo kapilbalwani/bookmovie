@@ -1,0 +1,18 @@
+[
+    {
+        "date":"1 June",
+        "time":"3 PM",
+        "price":"200"
+    },
+    {
+        "date":"2 June",
+        "time":"1 PM",
+        "price":"200"
+    },
+    {
+        "date":"3 June",
+        "time":"6 PM",
+        "price":"200"
+    }
+
+]

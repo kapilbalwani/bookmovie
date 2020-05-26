@@ -1,0 +1,25 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="form-group">
+    <label for="sel1">Sort By : &nbsp;&nbsp;</label>
+    <select class="form-control" id="sel1" (change)="onChange($event.target.value)">
+      <option value="Popularity">Popularity</option>
+      <option value="Name">Name</option>
+    </select>
+    <form class="form-inline my-2 my-lg-0" (ngSubmit)="onSearch(f)" #f='ngForm'>
+      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search" name="filteredStatus" ngModel>
+      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+    </form>
+  </div>
+  
+  <div class="card" style="width: 18rem;" appHighlight defaultColor='transparent' highlightColor='yellow' *ngFor="let movie of movieList | filterMovie:filteredStatus">
+    <img src="{{movie.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">{{movie.name}}</h5>
+      <p class="card-text">{{movie.language}}</p>
+      <p class="card-text">{{movie.dim}}</p>
+      <p class="card-text">Rating : {{movie.rating}}</p>
+      <button class="btn btn-primary" (click)="onBook(movie.name)">Book</button>
+      <p class="recommended" *ngIf="+movie.rating>3">Recommended</p>
+    </div>
+  </div>
+</div>

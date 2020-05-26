@@ -1,0 +1,36 @@
+
+
+.jumbotron{
+    
+    margin-top: 20px;
+    padding: 20px;
+}
+
+img{
+    height: 300px;
+    width: 300px;
+    margin:0 auto;
+}
+
+
+p{
+    margin: 0;
+    padding: 1px;
+}
+
+.card{
+    vertical-align: top;
+    display: inline-block;
+    margin-left: 200px;
+    /* height: 500px; */
+    width:400px;
+}
+
+.nav-link{
+    margin: 0;
+    padding: 0;
+}
+
+.card-text{
+    padding:9px;
+}

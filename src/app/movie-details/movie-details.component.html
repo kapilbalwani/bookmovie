@@ -1,0 +1,52 @@
+<div class="jumbotron jumbotron-fluid">
+  <div class="card"  >
+    <img src="{{movie.image}}" class="card-img-top" alt="...">
+    <div class="card-body">
+      <h5 class="card-title">Movie Name : {{movie.name}}</h5>
+      <p class="card-text">Language : {{movie.language}} </p>
+      <p class="card-text">Format : {{movie.dim}}</p>
+      <p class="card-text">Rating : {{movie.rating}}</p>
+      <!-- <a href="#" class="btn btn-primary">Book</a>
+      <p class="recommended" *ngIf="+movie.rating>3">Recommended</p> -->
+    </div>
+  </div>
+
+  <div class="card" >
+    <!-- <img src="../../assets/movieimages/Taare_Zameen_Par_Like_Stars_on_Earth_poster.png" class="card-img-top" alt="..."> -->
+    <div class="card-body" >
+      <h6 class="card-title">Select your theater: </h6>
+      <a class="nav-link" (click)="onTheatreSelect(theatre)" *ngFor="let theatre of theatres">{{theatre}}</a>
+      
+      <!-- <h5 class="card-title">Movie Name : </h5>
+      <p class="card-text">Language : </p>
+      <p class="card-text">Format : </p>
+      <p class="card-text">Rating : </p> -->
+      <!-- <a href="#" class="btn btn-primary">Book</a>
+      <p class="recommended" *ngIf="+movie.rating>3">Recommended</p> -->
+      <form (ngSubmit)="onSubmit(f)" #f=ngForm *ngIf="theaterSelected!='None'"> 
+          <div class="form-group">
+              <h6 class="card-title">Theater Selected : </h6>
+              
+              <input type="text" class="form-control" id="formGroupExampleInput" [(ngModel)]="theaterSelected" name='theatre' disabled="disabled">
+          </div>
+          <div class="form-group">
+              <label for="exampleFormControlSelect1">Date</label>
+              <select class="form-control" id="exampleFormControlSelect1" ngModel name='date'>
+                <option *ngFor="let show of showList">{{show.date}}</option>
+              </select>
+            </div>
+          <div class="form-group">
+            <label for="exampleFormControlSelect1">Time</label>
+            <select class="form-control" id="exampleFormControlSelect1" ngModel name='time'>
+              <option *ngFor="let show of showList">{{show.time}}</option>
+            </select>
+          </div>
+          <div class="form-group">
+              <label for="formGroupExampleInput">Number of Seats(2-10):</label>
+              <input type="text" class="form-control" id="formGroupExampleInput" placeholder="" ngModel name='seats'>
+          </div>
+          <button type="submit" class="btn btn-primary">Proceed</button>
+        </form>
+    </div>
+  </div>
+</div>
